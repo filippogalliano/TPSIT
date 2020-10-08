@@ -7,31 +7,33 @@
 
 int menu(){		
 	int x;
-	printf("1. ENCODING...");
-	printf("\n2. DECODING...");
+	printf("1. ENCODING ...");
+	printf("\n2. DECODING ...");
 	scanf("%d", &x);
 	return x;
 }
 
 void main(){
 	char lettere[LUNG];		//inizializzazione di una stringa
-	int cnt = 0;
+	int cnt = 1;
 	int temp;
+	
 	switch(menu()){
 		case 1:
-			printf("\nInserisci una sequenza di 20 lettere al massimo... ");
+			printf("\nInserisci una sequenza di 20 lettere al massimo ... ");
 			scanf("%s", lettere);
 			for(int k = 0 ; k < LUNG ; k++){		//for che cicle per tutta la stringa
 				if(lettere[k] == lettere[k + 1]){		//if che chiede se un carattere è uguiale al successivo
 					cnt++;
 				}else{
 					printf("%d%c", cnt, lettere[k]);		//stampa della stringa encodificata
-					cnt = 0;
+					cnt = 1;
 				}
 			}
 		break;
+		
 		case 2:
-			printf("\nInserisci una sequenza di numeri e lettere... ");
+			printf("\nInserisci una sequenza di numeri e lettere ... ");
 			scanf("%s", lettere);
 			for(int k = 0 ; k < LUNG ; k++){		//for che cicla per tutta la stringa
 				if(lettere[k] > '0' && lettere[k] <= '9'){		//if che chiede se il carattere è un numero o no
