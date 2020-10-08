@@ -34,8 +34,8 @@ void main(){
 			printf("\nInserisci una sequenza di numeri e lettere... ");
 			scanf("%s", lettere);
 			for(int k = 0 ; k < LUNG ; k++){		//for che cicla per tutta la stringa
-				temp = lettere[k] - ASCII;		//trasformo il carattere nel numero corrispondente del codice ascii
 				if(lettere[k] > '0' && lettere[k] <= '9'){		//if che chiede se il carattere è un numero o no
+					temp = lettere[k] - ASCII;		//trasformo il carattere nel numero corrispondente del codice ascii
 					for(int j = 0 ; j < temp ; j++){		//for che cicla fino a che non ha stampato tutti i caratteri
 						printf("%c", lettere[k + 1]);
 					}
